@@ -1,16 +1,18 @@
-let init = () => {
+const init = () => {
   let db = [];
 
-  let create = newElement => {
+  const create = newElement => {
     db.push(newElement);
-    return db.length;
+    let options = [db.length, db];
+    return options;
   };
 
-  return create();
+  return create;
 };
 
-let createInDb = init();
+const createInDb = init();
 
-console.log(createInDb[1]());
-console.log(createInDb(2));
-console.log(createInDb(3));
+console.log(createInDb("dog"));
+console.log(createInDb("cat"));
+console.log(createInDb("bird"));
+console.log(createInDb());
