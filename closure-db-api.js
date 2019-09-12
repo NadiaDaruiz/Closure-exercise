@@ -2,8 +2,8 @@ const init = () => {
   let db = [];
   let api = [];
 
-  const create = newElement => {
-    db.push(newElement);
+  const create = element => {
+    db.push(element);
     return db.length;
   };
 
@@ -12,7 +12,12 @@ const init = () => {
     return dbCopy;
   };
 
-  api.push(create, read);
+  //const update = (index, newElement) => {};
+
+  api.push(create);
+  api.push(read);
+  //api.push(update);
+
   return api;
 };
 
@@ -25,3 +30,6 @@ console.log(createInDb[0]("fish"));
 //console.log(init());
 //console.log(createInDb[0]());
 console.log(createInDb[1]());
+createInDb[0]("lizard");
+console.log(createInDb[1]());
+createInDb[1]();
