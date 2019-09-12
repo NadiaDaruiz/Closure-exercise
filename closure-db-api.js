@@ -23,3 +23,5 @@ console.log(createInDb[0]("cat"));
 console.log(createInDb[0]("bird"));
 console.log(createInDb[0]("fish"));
 //console.log(init());
+//console.log(createInDb[0]());
+console.log(createInDb[1]());
