@@ -7,7 +7,12 @@ const init = () => {
     return db.length;
   };
 
-  api.push(create);
+  const read = () => {
+    let dbCopy = [...db];
+    return dbCopy;
+  };
+
+  api.push(create, read);
   return api;
 };
 
