@@ -1,18 +1,20 @@
 const init = () => {
   let db = [];
+  let api = [];
 
   const create = newElement => {
     db.push(newElement);
-    let options = [db.length, db];
-    return options;
+    return db.length;
   };
 
-  return create;
+  api.push(create);
+  return api;
 };
 
 const createInDb = init();
 
-console.log(createInDb("dog"));
-console.log(createInDb("cat"));
-console.log(createInDb("bird"));
-console.log(createInDb());
+console.log(createInDb[0]("dog"));
+console.log(createInDb[0]("cat"));
+console.log(createInDb[0]("bird"));
+console.log(createInDb[0]("fish"));
+//console.log(init());
