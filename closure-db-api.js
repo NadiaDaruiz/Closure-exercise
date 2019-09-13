@@ -33,12 +33,6 @@ const init = () => {
 
   let api = [create, read, update, remove];
 
-  //   //api.push(create);
-  //   api.push(read);
-  //   api.push(update);
-  //   api.push(remove);
-  //   console.log(api);
-
   return api;
 };
 const createInDb = init();
@@ -57,8 +51,12 @@ console.log(accessRead());
 console.log(accessCreate("cat"));
 console.log(accessRead());
 console.log(accessRemove(0));
-
 console.log(accessUpdate(0, "bird"));
+console.log(accessRead());
+console.log(accessCreate("dog"));
+console.log(accessCreate("hamster"));
+console.log(accessCreate("lizard"));
+console.log(accessRead());
 
 // console.log(createInDb[0]("dog"));
 // console.log(createInDb[0]("cat"));
