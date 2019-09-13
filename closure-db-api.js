@@ -12,14 +12,14 @@ const init = () => {
   };
 
   const update = (index, newElement) => {
-    const oldIndex = db[index];
+    const oldElement = db[index];
 
     if (index >= 0 && index <= db.length - 1) {
       db.splice(index, 1, newElement);
     } else {
       return create(newElement);
     }
-    return `You have changed one item:${oldIndex} for ${newElement}.`;
+    return `You have changed one item:${oldElement} for ${newElement}.`;
   };
 
   const remove = removeFromIndex => {
