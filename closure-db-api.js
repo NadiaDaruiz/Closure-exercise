@@ -14,6 +14,8 @@ const init = () => {
   const update = (index, newElement) => {
     const oldElement = db[index];
 
+    // if (db[index]){return db[index] = newElement} -- A different way to write the same thing
+
     if (index >= 0 && index <= db.length - 1) {
       db.splice(index, 1, newElement);
     } else {
@@ -23,12 +25,15 @@ const init = () => {
   };
 
   const remove = removeFromIndex => {
+    const removedElement = db[removeFromIndex];
+    // if (db[index]) {return db.splice(index,1)} --  A different way to write the same thing
+
     if (removeFromIndex >= 0 && removeFromIndex <= db.length - 1) {
       db.splice(removeFromIndex, 1);
     } else {
       return "Error. The element doesn't exists.";
     }
-    return `You have deleted one item: ${db[removeFromIndex]}.`;
+    return `You have deleted one item: ${removedElement}.`;
   };
 
   let api = [create, read, update, remove];
